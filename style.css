@@ -7,4 +7,51 @@
 body {
   font-family: 'Hind Siliguri', sans-serif;
   margin: 0;
+  background-color: white;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(.95);
+}
+
+button:focus,
+input:focus {
+  outline: 0;
+}
+
+header {
+  background-image: url(./img/equalizer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  position: relative;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* pushes header elements in front of overlay */
+header * {
+  z-index: 1;
+}
+
+header h1 {
+  margin: 0 0 30px;
 }
